@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo2vcs5vy78s8"]
+
+[ext_resource type="Script" uid="uid://buk3oaev6t3vc" path="res://scenes/main_screen.gd" id="1_7fvvs"]
+
+[node name="Main Screen" type="Node2D"]
+script = ExtResource("1_7fvvs")
+
+[node name="ExerciseList" type="OptionButton" parent="."]
+offset_left = 74.0
+offset_top = 68.0
+offset_right = 229.0
+offset_bottom = 88.0
+
+[node name="ExerciseOpen" type="Button" parent="."]
+offset_left = 175.0
+offset_top = 115.0
+offset_right = 237.0
+offset_bottom = 146.0
+text = "Open"
+
+[connection signal="pressed" from="ExerciseOpen" to="." method="_on_exercise_open_pressed"]
