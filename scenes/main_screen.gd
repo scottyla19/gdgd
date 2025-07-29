@@ -31,7 +31,7 @@ func _ready() -> void:
 		exercise_list.set_item_metadata(int(item["index"]), Dictionary({"path":item["path"],
 		"name":item["name"]}))
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_exercise_open_pressed() -> void:

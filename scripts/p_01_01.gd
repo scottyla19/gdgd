@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 	mousePos.x = clampf(mouse_percent.x, 0.1, 0.9)
 	mousePos.y = clampf(mouse_percent.y, 0.05, 0.95)
 	
-	material.set_shader_parameter("rect_size", mousePos.x)
-	material.set_shader_parameter("color_base", mousePos.y)
+	material.set_shader_parameter("mouse_x", mousePos.x)
+	material.set_shader_parameter("mouse_y", mousePos.y)
 	
 	
