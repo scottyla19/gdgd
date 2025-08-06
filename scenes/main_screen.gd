@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var exercise_list: OptionButton = $ExerciseList
+@onready var example: Node2D = $Example
 
 func read_scenes_json(file_path) -> Dictionary:
 	if not FileAccess.file_exists(file_path):
@@ -37,5 +38,9 @@ func _process(_delta: float) -> void:
 func _on_exercise_open_pressed() -> void:
 	var idx = exercise_list.get_selected_id()
 	var metadata = exercise_list.get_item_metadata(idx)
-	get_tree().change_scene_to_file(metadata["path"])
+	for child in example.get_children():
+		child.queue_free()
+	var new_example = load(metadata["path"])
+	example.add_child(new_example.instantiate())
+	#get_tree().change_scene_to_file(metadata["path"])
 	

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bo2vcs5vy78s8"]
+[gd_scene load_steps=3 format=3 uid="uid://bo2vcs5vy78s8"]
 
 [ext_resource type="Script" uid="uid://buk3oaev6t3vc" path="res://scenes/main_screen.gd" id="1_7fvvs"]
+[ext_resource type="PackedScene" uid="uid://b57m7stw7tesn" path="res://scenes/p_10.tscn" id="2_kusfh"]
 
 [node name="Main Screen" type="Node2D"]
 script = ExtResource("1_7fvvs")
@@ -17,5 +18,10 @@ offset_top = 115.0
 offset_right = 237.0
 offset_bottom = 146.0
 text = "Open"
+
+[node name="Example" type="Node2D" parent="."]
+position = Vector2(108, 0)
+
+[node name="p_10" parent="Example" instance=ExtResource("2_kusfh")]
 
 [connection signal="pressed" from="ExerciseOpen" to="." method="_on_exercise_open_pressed"]

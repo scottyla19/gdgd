@@ -3,12 +3,22 @@
 	{
 		"index":0,
 		"name": "P.1.0: Hello, color",
-		"path": "res://scenes/p_01_00.tscn"
+		"path": "res://scenes/p_10.tscn"
 	},
 	{
 		"index":1,
-		"name": "P.1.1: Color spectrum",
-		"path": "res://scenes/p_01_01.tscn"
+		"name": "P.1.1.1: Color spectrum",
+		"path": "res://scenes/p_111.tscn"
+	},
+	{
+		"index":2,
+		"name": "P.1.1.2: Color wheel",
+		"path": "res://scenes/p_112.tscn"
+	},
+	{
+		"index":3,
+		"name": "P.1.2.1: Color palette interpolation",
+		"path": "res://scenes/p_121.tscn"
 	}
 ]
 }

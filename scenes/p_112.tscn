@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjdbnlms8jd6c"]
+
+[ext_resource type="Shader" uid="uid://b6hdaixylwg76" path="res://shaders/p_112.gdshader" id="1_58ctf"]
+[ext_resource type="Texture2D" uid="uid://cxnotjnmo3my" path="res://icon.svg" id="2_r6g04"]
+[ext_resource type="Script" uid="uid://hxouekxettre" path="res://scripts/p_112.gd" id="3_qwvwj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2pj3"]
+shader = ExtResource("1_58ctf")
+shader_parameter/segment_count = 12
+
+[node name="p_112" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_b2pj3")
+position = Vector2(604, 318)
+scale = Vector2(5.10938, 5.10938)
+texture = ExtResource("2_r6g04")
+script = ExtResource("3_qwvwj")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 69.0
+offset_top = 168.0
+offset_right = 206.0
+offset_bottom = 201.0
+selected = 1
+item_count = 5
+popup/item_0/text = "6"
+popup/item_0/id = 6
+popup/item_1/text = "12"
+popup/item_1/id = 12
+popup/item_2/text = "24"
+popup/item_2/id = 24
+popup/item_3/text = "45"
+popup/item_3/id = 45
+popup/item_4/text = "360"
+popup/item_4/id = 360
+
+[connection signal="item_selected" from="OptionButton" to="Sprite2D" method="_on_option_button_item_selected"]

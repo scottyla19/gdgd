@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccirjstelmx7r"]
+
+[ext_resource type="Shader" uid="uid://b4mg2pa660ldh" path="res://shaders/p_121.gdshader" id="1_tsm2f"]
+[ext_resource type="Texture2D" uid="uid://cxnotjnmo3my" path="res://icon.svg" id="2_a7ecd"]
+[ext_resource type="Script" uid="uid://bncvqaotn8etr" path="res://scripts/p_121.gd" id="3_tsm2f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2pj3"]
+shader = ExtResource("1_tsm2f")
+shader_parameter/mouse_x = 0.2
+shader_parameter/mouse_y = 0.2
+
+[node name="p_121" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_b2pj3")
+position = Vector2(604, 318)
+scale = Vector2(5.10938, 5.10938)
+texture = ExtResource("2_a7ecd")
+script = ExtResource("3_tsm2f")
